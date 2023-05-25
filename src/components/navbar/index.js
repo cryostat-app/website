@@ -9,9 +9,10 @@ function Navbar () {
         <Logo />
       </div>
       <div className="links">
-        <a href='https://github.com/cryostat-app'>Github</a>
+        <a href='/'>About</a>
         <a href='/'>Pricing</a>
         <a href='/'>Self-Hosted</a>
+        <a href='https://github.com/cryostat-app'>Github</a>
         <a href='/'>Feedback</a>
       </div>
       <div className="actions">
