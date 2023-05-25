@@ -5,8 +5,7 @@ RUN apk update && apk add gnupg wget
 WORKDIR /tmp
 ADD ./src /tmp/src
 ADD ./public /tmp/public
-COPY ["tsconfig.json", "package.json", "/tmp/"]
-RUN npm install serve npm@latest -g
+COPY ["package.json", "package-lock.json",  "/tmp/"]
 RUN npm install && npm run build
 
 FROM busybox:latest
