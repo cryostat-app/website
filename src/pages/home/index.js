@@ -43,7 +43,7 @@ await fetch('https://send.cryostat.app/data', {
         <div id="primary" className="subtext">
           API / Websocket driven data input that gives developers<br/>access to metrics and status pages. All in one.
           <div>
-            <a href='/'>Coming Soon</a> <a href='/'>Coming Soon</a>
+            <a href='/'>Coming Soon</a> <a href='https://github.com/cryostat-app'>GitHub</a>
           </div>
         </div>
       </div>
