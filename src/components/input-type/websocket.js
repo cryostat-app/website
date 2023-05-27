@@ -1,9 +1,9 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { atelierSulphurpoolLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function WebsocketInput () {
-  return (<div>
-    <SyntaxHighlighter language="javascript" style={docco}>
+  return (<div className='example-code'>
+    <SyntaxHighlighter language="javascript" style={atelierSulphurpoolLight}>
       {`
 // Node v18.16.0 (LTS)
 const CryoStatClient = require('cryostat-ws');
