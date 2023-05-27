@@ -63,4 +63,36 @@
       }
     }
   }
+
+  .step-text {
+    display: flex;
+    align-items: center;
+
+    .input-type-toggle {
+      display: flex;
+      margin-left: auto;
+      border-radius: 50px;
+
+      border: 1px solid var(--light-text-primary);
+
+      span {
+        cursor: pointer;
+        padding: 3px 15px;
+        border-radius: 50px 0 0 50px;
+
+        &[aria-selected="true"] {
+          background-color: var(--light-button-primary);
+          transition: 0.2s;
+        }
+
+        &:first-child[aria-selected="true"] {
+          border-radius: 50px 0 0 50px;
+        }
+
+        &:last-child[aria-selected="true"] {
+          border-radius: 0 50px 50px 0;
+        }
+      }
+    } 
+  }
 }

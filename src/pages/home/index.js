@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import './index.scss';
 import { ReactComponent as Logo } from "../../static/logoWithText.svg";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { Chart } from "../../components/app-intro/chart";
+import InputTypeToggle from "../../components/input-type";
 
 function App () {
+  const [inputType, setInputType] = useState('api');
+
   return (
     <div className="app">
       <div className="homegrid">
@@ -15,24 +16,14 @@ function App () {
 
         <div className="app-intro">
           <div>
-            <span className="bold">Step 1: </span>Post your data
-            <div>
-              <SyntaxHighlighter language="javascript" style={docco}>
-                {`
-await fetch('https://send.cryostat.app/data', {
-  method: 'POST'
-  headers: {
-    Authentication: 'Bearer ...',
-    Content-Type: 'application/json'
-  }
-  body: {
-    timestamp: Date.now(), // Default
-    data: { ... }
-  }
-}) // Returns { status: 200, body: { message: 'Ok' } }
-                  `}
-              </SyntaxHighlighter>
+            <div className="step-text">
+              <span className="bold">Step 1:&nbsp;</span>Post your data
+              <span className="input-type-toggle">
+                <span aria-selected={inputType === 'api'} onClick={() => { setInputType('api'); }}>API</span>
+                <span aria-selected={inputType === 'websocket'} onClick={() => { setInputType('websocket'); }}>Websocket</span>
+              </span>
             </div>
+            <InputTypeToggle type={inputType} />
           </div>
           <div><span className="bold">Step 3: </span>Visualise your data</div>
           <div>
@@ -41,7 +32,7 @@ await fetch('https://send.cryostat.app/data', {
         </div>
 
         <div id="primary" className="subtext">
-          API / Websocket driven data input that gives developers<br/>access to metrics and status pages. All in one.
+          API / Websocket driven data input that gives developers<br />access to metrics and status pages. All in one.
           <div>
             <a href='/'>Get Started</a> <a href='https://github.com/cryostat-app'>GitHub</a>
           </div>
