@@ -16,9 +16,8 @@ function Navbar () {
         <a href='/'>Feedback</a>
       </div>
       <div className="actions">
-        <a href='/'>Self-host</a>
-        <a href='/'>Login</a>
-        <a href='/'>Sign up</a>
+        <a href='https://dash.cryostat.app/login'>Login</a>
+        <a href='https://dash.cryostat.app/signup'>Sign up</a>
       </div>
     </div>
   );
