@@ -16,4 +16,4 @@ WORKDIR /home/static
 
 COPY --chown=1000:1000 --from=base /tmp/build/ .
 
-CMD ["npx", "serve", "-s", "/tmp/build"]
+CMD ["npx", "serve", "-s", "."]
